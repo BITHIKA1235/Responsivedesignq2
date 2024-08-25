@@ -1,0 +1,37 @@
+/* Basic reset for margins and paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Style for the gallery container */
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Default to 3 images per row */
+    gap: 10px; /* Space between images */
+    padding: 10px;
+  }
+  
+  /* Style for images */
+  .gallery img {
+    width: 100%; /* Make images responsive to container width */
+    height: auto; /* Maintain aspect ratio */
+    display: block;
+  }
+  
+  /* Media query for screens smaller than 800px */
+  @media (max-width: 800px) {
+    .gallery {
+      grid-template-columns: repeat(2, 1fr); /* Adjust to 2 images per row */
+    }
+  }
+  
+  /* Media query for screens smaller than 500px */
+  @media (max-width: 500px) {
+    .gallery {
+      grid-template-columns: 1fr; /* Adjust to 1 image per row */
+    }
+  }
+  
+  
